@@ -16,13 +16,13 @@ pipeline {
 
         stage('Train Model') {
             steps {
-                sh 'python train.py'
+                sh 'python3 train.py'
             }
         }
 
         stage('Test Model') {
             steps {
-                sh 'python test.py'
+                sh 'python3 test.py'
             }
         }
 
