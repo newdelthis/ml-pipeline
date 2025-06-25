@@ -14,3 +14,8 @@ y_pred = model.predict(X_test)
 # Evaluate
 mse = mean_squared_error(y_test, y_pred)
 print(f"Model MSE: {mse:.2f}")
+
+# Print predicted versus actual
+results_df = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
+print(results_df.head(20))
+print(f"\n... displaying {len(results_df)} total samples.")
